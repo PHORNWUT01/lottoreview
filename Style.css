@@ -1,0 +1,219 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+    color: #333;
+    font-size: 16px; /* Base font size for mobile */
+}
+
+.container {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+/* Header */
+header {
+    background: #333;
+    color: #fff;
+    padding: 1rem 0;
+}
+
+header .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+header .logo {
+    color: #fff;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 1.5rem;
+}
+
+/* Navigation */
+#main-nav ul {
+    padding: 0;
+    list-style: none;
+    display: none; /* Hide by default on mobile */
+    width: 100%;
+    text-align: center;
+}
+#main-nav.show ul {
+    display: block;
+}
+#main-nav li {
+    margin: 10px 0;
+}
+
+#main-nav li a {
+    color: white;
+    text-decoration: none;
+    font-size: 1.2rem;
+}
+
+.nav-button {
+    background: #555;
+    color: #fff;
+    border: none;
+    padding: 8px 15px;
+    cursor: pointer;
+    display: block; /* Always show the menu button */
+}
+
+/* Hero Section */
+#hero {
+    background: #e1e1e1;
+    text-align: center;
+    padding: 2rem 0;
+}
+
+#hero h1 {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+}
+#hero p {
+    font-size: 1.2rem;
+}
+
+.cta-button {
+    background-color: #333;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    text-decoration: none;
+    display: inline-block;
+}
+
+section {
+    padding: 20px 0;
+}
+
+section h2 {
+    margin-bottom: 1rem;
+}
+
+footer {
+    background: #333;
+    color: #fff;
+    text-align: center;
+    padding: 1rem 0;
+}
+
+/* Media Query for Desktop */
+@media (min-width: 768px) {
+    body {
+        font-size: 14px; /* Reduce font size for larger screens */
+    }
+    #main-nav ul {
+        display: flex; /* Show as a horizontal menu */
+        width: auto;
+    }
+
+    #main-nav li {
+        margin: 0 10px;
+    }
+
+    .nav-button {
+        display: none; /* Hide the button on desktop */
+    }
+    #hero h1{
+        font-size: 2.5rem;
+    }
+    #hero p{
+        font-size: 1.3rem;
+    }
+}
+
+/* Contact Section Line Button */
+.contact-button-container {
+    text-align: center; /* Center the button */
+    margin-top: 20px;
+}
+
+.line-button {
+    background-color: #00B900; /* Line's green color */
+    color: #fff;
+    padding: 10px 20px;
+    border-radius: 5px;
+    text-decoration: none;
+    display: inline-flex; /* Make it an inline block for the image and text to be side by side */
+    align-items: center; /* Align items vertically */
+    transition: background-color 0.3s ease;
+}
+
+.line-button:hover {
+    background-color: #008000; /* Darker green on hover */
+}
+
+.line-button img {
+    width: 30px; /* Adjust the size of the Line icon */
+    height: 30px;
+    margin-right: 10px; /* Add spacing between the icon and text */
+}
+
+/* Animation */
+.wow {
+    visibility: hidden;
+}
+/* Image Slider Styles */
+#image-gallery {
+  padding: 20px 0;
+}
+.image-slider {
+    overflow-x: auto; /* Enable horizontal scrolling */
+    white-space: nowrap; /* Prevent images from wrapping to the next line */
+    width: 100%;
+}
+
+.image-track {
+    display: inline-flex; /* Arrange images horizontally */
+    gap: 10px; /* Spacing between images */
+    padding-bottom: 10px;
+}
+
+.image-slide {
+    cursor: pointer; /* Make it clear the images are clickable */
+    display: inline-block; /* Allow height/width settings */
+    
+}
+.image-slide img{
+    max-width: 200px;
+    max-height: 150px;
+    width: auto;
+    height: auto;
+}
+/* Sponsors Section Styles */
+#sponsors {
+    padding: 20px 0;
+}
+
+.sponsor-container {
+    display: flex;
+    justify-content: space-around; /* Distribute space evenly */
+    align-items: center;
+    flex-wrap: wrap; /* Allow logos to wrap on smaller screens */
+    gap: 20px;
+}
+
+.sponsor-logo {
+    display: inline-block;
+    max-width: 150px; /* Adjust as needed */
+    width: 100%;
+    text-align: center;
+    transition: transform 0.2s ease; /* Smooth hover effect */
+}
+
+.sponsor-logo:hover {
+    transform: scale(1.05); /* Slightly enlarge on hover */
+}
+
+.sponsor-logo img {
+    max-width: 100%;
+    height: auto;
+    display: block; /* Remove extra space below the image */
+    margin: 0 auto;
+}
